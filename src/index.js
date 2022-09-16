@@ -1,11 +1,16 @@
-import React from "react"
-import ReactDOM from "react-dom"
-//component file
-import ToDoContainer from "./components/ToDoContainer"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import TodoContainer from './functionBased/components/TodoContainer';
 
-ReactDOM.render(
+// stylesheet
+import './functionBased/App.css';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <ToDoContainer />
+    <Router>
+      <TodoContainer />
+    </Router>
   </React.StrictMode>,
-  document.getElementById("root")
-)
+);
